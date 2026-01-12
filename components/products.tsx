@@ -7,8 +7,10 @@ import { Card } from "@/components/ui/card"
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef } from "react"
 import Image from "next/image"
+import { useWhatsApp } from "@/contexts/whatsapp-context"
 
 export function Products() {
+  const { handleWhatsAppClick } = useWhatsApp()
   const whatsappNumber = "5518998223977"
   const scrollRef1 = useRef<HTMLDivElement>(null)
   const scrollRef2 = useRef<HTMLDivElement>(null)
@@ -41,7 +43,7 @@ export function Products() {
 
   const handleWhatsApp = (product: string) => {
     const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre: ${product}`)
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank")
+    handleWhatsAppClick(`https://wa.me/${whatsappNumber}?text=${message}`)
   }
 
   const scroll = (ref: React.RefObject<HTMLDivElement>, direction: "left" | "right") => {
@@ -150,7 +152,7 @@ export function Products() {
             className="bg-[#911914] hover:bg-[#711412] text-white text-lg px-10 py-3 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
             onClick={() => {
               const message = encodeURIComponent("Olá! Quero fazer um orçamento para minha festa!")
-              window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank")
+              handleWhatsAppClick(`https://wa.me/${whatsappNumber}?text=${message}`)
             }}
           >
             <MessageCircle className="mr-2 h-5 w-5" />

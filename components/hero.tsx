@@ -3,8 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
 import Image from "next/image"
+import { useWhatsApp } from "@/contexts/whatsapp-context"
 
 export function Hero() {
+  const { handleWhatsAppClick } = useWhatsApp()
   const whatsappNumber = "5518998223977"
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de fazer um pedido.")
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
@@ -27,17 +29,13 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-[#911914] hover:bg-[#711412] text-white text-lg sm:text-xl md:text-2xl px-10 sm:px-14 md:px-20 py-4 sm:py-5 md:py-6 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300"
-              asChild
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppClick(whatsappUrl)
+              }}
             >
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 sm:gap-3"
-              >
-                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-                <span>Faça seu pedido!</span>
-              </a>
+              <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+              <span>Faça seu pedido!</span>
             </Button>
           </div>
         </div>

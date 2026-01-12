@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, MessageCircle } from "lucide-react"
 import Image from "next/image"
+import { useWhatsApp } from "@/contexts/whatsapp-context"
 
 export function Navbar() {
+  const { handleWhatsAppClick } = useWhatsApp()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -61,12 +63,13 @@ export function Navbar() {
             <Button
               size="sm"
               className="bg-[#e74249] hover:bg-[#d63238] hover:scale-105 text-white rounded-full px-6 py-5 transition-all duration-300"
-              asChild
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppClick(whatsappUrl)
+              }}
             >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                <MessageCircle className="h-4 w-4" />
-                <span>WhatsApp</span>
-              </a>
+              <MessageCircle className="h-4 w-4" />
+              <span>WhatsApp</span>
             </Button>
           </div>
 
@@ -90,11 +93,16 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="bg-[#e74249] hover:bg-[#d63238] text-white rounded-full w-full" asChild>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  WhatsApp
-                </a>
+              <Button
+                size="sm"
+                className="bg-[#e74249] hover:bg-[#d63238] text-white rounded-full w-full"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleWhatsAppClick(whatsappUrl)
+                }}
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                WhatsApp
               </Button>
             </div>
           </div>

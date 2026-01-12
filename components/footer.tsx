@@ -3,10 +3,13 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Instagram, MessageCircle } from "lucide-react"
+import { useWhatsApp } from "@/contexts/whatsapp-context"
 
 export function Footer() {
+  const { handleWhatsAppClick } = useWhatsApp()
   const whatsappNumber = "5518998223977"
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de fazer um pedido.")
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -72,16 +75,13 @@ export function Footer() {
             <Button
               size="icon"
               className="bg-white/10 hover:bg-white/20 hover:scale-110 text-white rounded-full h-12 w-12 transition-all duration-300"
-              asChild
+              onClick={(e) => {
+                e.preventDefault()
+                handleWhatsAppClick(whatsappUrl)
+              }}
+              aria-label="WhatsApp"
             >
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle className="h-6 w-6" />
-              </a>
+              <MessageCircle className="h-6 w-6" />
             </Button>
           </div>
         </div>
