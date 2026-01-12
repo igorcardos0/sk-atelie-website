@@ -40,11 +40,11 @@ export function Testimonials() {
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="page-container">
-        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-tight">
+        <h2 className="text-5xl md:text-7xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-[0.9]">
           O que dizem nossos clientes
         </h2>
 
-        <div className="max-w-4xl mx-auto relative overflow-hidden">
+        <div className="max-w-full mx-auto relative overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

@@ -5,11 +5,11 @@ export function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28 bg-muted/30">
       <div className="page-container">
-        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-tight">
+        <h2 className="text-5xl md:text-7xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-[0.9]">
           Entre em Contato
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-full mx-auto">
           {/* Contact Info */}
           <Card className="p-8 md:p-10 space-y-6 shadow-lg">
             <div className="flex items-start gap-4">

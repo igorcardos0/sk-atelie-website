@@ -36,8 +36,8 @@ export function Navbar() {
         scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="page-container">
+        <div className="flex items-center justify-between h-20 relative">
           {/* Logo */}
           <a href="#home" className="flex items-center">
             <Image
@@ -50,7 +50,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 ml-auto">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -74,7 +74,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-[#911914] cursor-pointer" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button className="md:hidden text-[#911914] cursor-pointer absolute right-6" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>

@@ -68,7 +68,7 @@ export function Products() {
     scrollRef: React.RefObject<HTMLDivElement>
     centered?: boolean
   }) => (
-    <div className="relative group max-w-6xl mx-auto px-4">
+    <div className="relative group max-w-full mx-auto px-4">
       {/* Left Arrow */}
       <button
         onClick={() => scroll(scrollRef, "left")}
@@ -123,22 +123,22 @@ export function Products() {
   return (
     <section id="produtos" className="py-20 md:py-28 bg-background animate-fade-in-up">
       <div className="page-container">
-        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-tight">
+        <h2 className="text-5xl md:text-7xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-[0.9]">
           Nossos Produtos
         </h2>
 
         <div className="mb-12">
-          <h3 className="text-3xl md:text-4xl font-[900] uppercase text-[#911914] mb-6 text-center leading-tight">Salgadinhos</h3>
+          <h3 className="text-4xl md:text-5xl font-[900] uppercase text-[#911914] mb-6 text-center leading-[0.92]">Salgadinhos</h3>
           <ProductSlider products={salgadinhos} scrollRef={scrollRef1} />
         </div>
 
         <div className="mb-12">
-          <h3 className="text-3xl md:text-4xl font-[900] uppercase text-[#911914] mb-6 text-center leading-tight">Docinhos</h3>
+          <h3 className="text-4xl md:text-5xl font-[900] uppercase text-[#911914] mb-6 text-center leading-[0.92]">Docinhos</h3>
           <ProductSlider products={docinhos} scrollRef={scrollRef2} />
         </div>
 
         <div className="mb-12">
-          <h3 className="text-3xl md:text-4xl font-[900] uppercase text-[#911914] mb-6 text-center leading-tight">Bolos</h3>
+          <h3 className="text-4xl md:text-5xl font-[900] uppercase text-[#911914] mb-6 text-center leading-[0.92]">Bolos</h3>
           <ProductSlider products={bolos} scrollRef={scrollRef3} centered />
         </div>
 

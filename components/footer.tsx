@@ -20,7 +20,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[#e74249] text-white py-8 md:py-10 animate-fade-in-up">
-      <div className="page-container">
+      <div className="max-w-full mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">

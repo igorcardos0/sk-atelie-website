@@ -19,9 +19,9 @@ export function Hero() {
       >
         {/* Left Column - Content */}
         <div className="relative z-10 page-container py-12 md:py-16 lg:py-0 h-full flex flex-col justify-center">
-          <div className="max-w-xl mx-auto animate-fade-in-up">
+          <div className="max-w-2xl mx-auto animate-fade-in-up ml-10">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[900] uppercase text-white leading-[0.9] mb-4 md:mb-6 text-balance drop-shadow-2xl">
-              A sua festa pede SK Ateliê
+              A sua festa<br />pede<br />SK Ateliê
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 md:mb-8 text-pretty font-semibold drop-shadow-xl leading-snug">
               Salgados, bolos e doces, tudo com a qualidade que a sua festa merece!

@@ -26,11 +26,11 @@ export function About() {
             </div>
 
             {/* Right Column - Content */}
-            <div className="animate-fade-in-up space-y-5">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-[900] uppercase text-[#911914] text-balance leading-[0.95]">
+            <div className="animate-fade-in-up space-y-4">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-[900] uppercase text-[#911914] text-balance leading-[0.88]">
                 Por que<br />comprar com a SK?
               </h2>
-              <div className="space-y-3 text-white text-lg md:text-xl leading-snug">
+              <div className="space-y-2.5 text-white text-lg md:text-xl leading-tight">
                 <p className="text-pretty">
                   No SK Ateliê das Festas, transformamos momentos especiais em memórias inesquecíveis através do sabor
                   autêntico e qualidade incomparável.
