@@ -12,7 +12,7 @@ export function About() {
         {/* Background Texture */}
         <div className="absolute inset-0 text-pattern opacity-30 pointer-events-none" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="page-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Image with Click to Zoom */}
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
@@ -26,11 +26,11 @@ export function About() {
             </div>
 
             {/* Right Column - Content */}
-            <div className="animate-fade-in-up space-y-6">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-[900] uppercase text-[#911914] text-balance leading-tight">
+            <div className="animate-fade-in-up space-y-5">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-[900] uppercase text-[#911914] text-balance leading-[0.95]">
                 Por que<br />comprar com a SK?
               </h2>
-              <div className="space-y-4 text-white text-lg md:text-xl leading-relaxed">
+              <div className="space-y-3 text-white text-lg md:text-xl leading-snug">
                 <p className="text-pretty">
                   No SK Ateliê das Festas, transformamos momentos especiais em memórias inesquecíveis através do sabor
                   autêntico e qualidade incomparável.

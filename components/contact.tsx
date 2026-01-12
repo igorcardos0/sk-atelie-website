@@ -4,8 +4,8 @@ import { MapPin, Phone, Clock } from "lucide-react"
 export function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance">
+      <div className="page-container">
+        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-tight">
           Entre em Contato
         </h2>
 

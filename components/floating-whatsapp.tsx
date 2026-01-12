@@ -12,7 +12,8 @@ export function FloatingWhatsApp() {
   return (
     <button
       onClick={() => handleWhatsAppClick(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`)}
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer animate-bounce"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer animate-bounce max-w-[1440px] mx-auto"
+      style={{ right: 'max(1.5rem, calc((100vw - 1440px) / 2 + 1.5rem))' }}
       aria-label="WhatsApp"
     >
       <MessageCircle className="h-6 w-6" />

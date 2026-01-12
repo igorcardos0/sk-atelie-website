@@ -39,8 +39,8 @@ export function Testimonials() {
 
   return (
     <section className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance">
+      <div className="page-container">
+        <h2 className="text-4xl md:text-6xl font-[900] uppercase text-center text-[#911914] mb-16 text-balance leading-tight">
           O que dizem nossos clientes
         </h2>
 
@@ -57,7 +57,7 @@ export function Testimonials() {
                       <Star key={i} className="h-6 w-6 fill-[#e74249] text-[#e74249]" />
                     ))}
                   </div>
-                  <p className="text-xl md:text-2xl text-center mb-6 text-pretty text-foreground/80 leading-relaxed">
+                  <p className="text-xl md:text-2xl text-center mb-6 text-pretty text-foreground/80 leading-snug">
                     "{testimonial.text}"
                   </p>
                   <p className="text-lg font-semibold text-center text-[#911914]">— {testimonial.name}</p>

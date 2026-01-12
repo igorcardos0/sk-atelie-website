@@ -18,12 +18,12 @@ export function Hero() {
         className="relative h-[calc(100vh-5rem)] grid lg:grid-cols-2 items-center overflow-hidden hero-pattern"
       >
         {/* Left Column - Content */}
-        <div className="relative z-10 px-6 md:px-12 lg:px-20 py-12 md:py-16 lg:py-0 h-full flex flex-col justify-center">
+        <div className="relative z-10 page-container py-12 md:py-16 lg:py-0 h-full flex flex-col justify-center">
           <div className="max-w-xl mx-auto animate-fade-in-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[900] uppercase text-white leading-tight mb-4 md:mb-6 text-balance drop-shadow-2xl">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[900] uppercase text-white leading-[0.9] mb-4 md:mb-6 text-balance drop-shadow-2xl">
               A sua festa pede SK Ateliê
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 md:mb-8 text-pretty font-semibold drop-shadow-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-6 md:mb-8 text-pretty font-semibold drop-shadow-xl leading-snug">
               Salgados, bolos e doces, tudo com a qualidade que a sua festa merece!
             </p>
             <Button
